@@ -29,9 +29,6 @@ social:
   - title: dribbble
     url:
   - title: facebook
-<<<<<<< HEAD
-    url: http://fb.sjorringby.dk
-=======
     url:
   - title: twitter
     url: 
@@ -39,7 +36,6 @@ social:
     url: 
   - title: tumblr
     url: 
->>>>>>> parent of 0d492b0... Update _config.yml
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
