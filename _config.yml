@@ -1,8 +1,8 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: SOLID.
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Sjørring By
+description: "Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus"
 analytics: #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
 url: "http://sjorringby.dk"
@@ -37,7 +37,7 @@ social:
   - title: dribbble
     url:
   - title: facebook
-    url:
+    url: http://fb.sjorringby.dk
   - title: twitter
     url:
   - title: instagram
@@ -48,11 +48,10 @@ social:
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
   - lines:
-    - Some Ave, 987,
-    - 23890, New York,
-    - United States.
-email: hello@solidtheme.com
-tel: +34 8493-4893
+    - Hobro landevej 154A
+    - 8830, Tjele
+email: huset@sjorringby.dk
+tel: +45 xx xx xx xx
 
 
 ### GENERAL DATA FOR VARIOUS LOCATIONS ###
@@ -108,7 +107,7 @@ clients:
     img: client04.png
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
-about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+about: "Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus"
 
 # Testimonial content. Shown on Home and About page.
 testimonial:
