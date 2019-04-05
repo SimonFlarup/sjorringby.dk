@@ -11,7 +11,9 @@ permalink: /kontakt/
         <div class="col-lg-8">
             <h4>Send os en besked</h4>
             <div class="hline"></div>
-                <p>{{ site.about }}</p>
+                <p>
+                    Ønsker du at høre mere omkring udlejning af Sjørring forsamlingshus, har du idéer til bestyrelsen eller vil du på anden vis i kontakt med os? Udfyld formularen her, skriv til os på facebook eller brug vores kontakt oplysninger her fra siden, så vil vi vende tilbage hurtigst muligt.
+                </p>
                 <form role="form" action="https://getsimpleform.com/messages?form_api_token=6f45e7495f58879374525418de74dde2" method="post">
                 <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
                   <input type='hidden' name='redirect_to' value='https://sjorringby.dk/' />
@@ -36,7 +38,7 @@ permalink: /kontakt/
         </div><! --/col-lg-8 -->
 
         <div class="col-lg-4">
-            <h4>Forsamlingshuset</h4>
+            <h4>Sjørring Forsamlingshus</h4>
             <div class="hline"></div>
                 <p>
                     {% for line in site.address.first.lines %}
@@ -45,9 +47,9 @@ permalink: /kontakt/
                 </p>
                 <p>
                     Email: {{ site.email }}<br/>
-                    Tel: {{ site.tel }}
+                    <!--Tel: {{ site.tel }} -->
                 </p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p></p>
         </div>
     </div><! --/row -->
 </div><! --/container -->
