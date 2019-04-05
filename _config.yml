@@ -5,7 +5,7 @@ title: Sjørring By
 description: "Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus"
 analytics: #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
-url: "http://sjorringby.dk"
+url: "https://sjorringby.dk"
 
 # Build settings
 markdown: kramdown
