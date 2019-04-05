@@ -48,7 +48,7 @@ social:
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
   - lines:
-    - Hobro landevej 154A
+    - Hobro Landevej 152A
     - 8830, Tjele
 email: huset@sjorringby.dk
 tel: +45 xx xx xx xx
@@ -96,15 +96,15 @@ members:
         url: http://twitter.com/handle
 
 # Clients information. Shown on Home and About pages.
-clients:
-  - name: dribbble
-    img: client01.png
-  - name: Code is Poetry
-    img: client02.png
-  - name: Vimeo
-    img: client03.png
-  - name: VimeoPro
-    img: client04.png
+#clients:
+#  - name: dribbble
+#    img: client01.png
+#  - name: Code is Poetry
+#    img: client02.png
+#  - name: Vimeo
+#    img: client03.png
+#  - name: VimeoPro
+#    img: client04.png
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus"
