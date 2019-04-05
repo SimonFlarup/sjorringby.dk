@@ -12,18 +12,20 @@ permalink: /kontakt/
             <h4>Send os en besked</h4>
             <div class="hline"></div>
                 <p>{{ site.about }}</p>
-                <form role="form" action="https://formspree.io/huset@sjorringby.dk" method="POST">
+                <form role="form" action="https://getsimpleform.com/messages?form_api_token=6f45e7495f58879374525418de74dde2" method="post">
+                <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+                  <input type='hidden' name='redirect_to' value='https://sjorringby.dk/' />
                   <div class="form-group">
                     <label for="InputName">Dit navn</label>
-                    <input type="text" class="form-control" id="exampleInputName1">
+                    <input type="text" class="form-control" id="InputName1">
                   </div>
                   <div class="form-group">
                     <label for="InputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <input type="email" class="form-control" id="InputEmail1">
                   </div>
                   <div class="form-group">
                     <label for="InputSubject1">Emne</label>
-                    <input type="text" class="form-control" id="exampleInputSubject1">
+                    <input type="text" class="form-control" id="InputSubject1">
                   </div>
                   <div class="form-group">
                     <label for="message1">Besked</label>
