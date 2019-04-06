@@ -3,7 +3,7 @@
 # Site settings
 title: Sjørring By
 description: "Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus"
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
+analytics: UA-39920228-4 #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
 url: "https://sjorringby.dk"
 
