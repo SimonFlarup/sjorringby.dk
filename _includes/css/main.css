@@ -193,6 +193,7 @@ a:focus {
 .mtb {
 	margin-top: 80px;
 	margin-bottom: 80px;
+    min-height: 400px;
 }
 
 .mb {
