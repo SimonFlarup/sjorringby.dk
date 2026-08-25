@@ -35,7 +35,10 @@ npm run deploy:gh-pages
 By default, `build:gh-pages` uses:
 
 ```bash
-ng build --base-href /sjorringby.dk/
+ng build --base-href /
 ```
 
-If your repository name is different, update the `build:gh-pages` script in `package.json`.
+This is correct when the site is served from the custom domain `sjorringby.dk`.
+
+If you deploy to the default GitHub Pages project URL instead of the custom domain, update the
+`build:gh-pages` script in `package.json` to use your repository path, for example `/repo-name/`.

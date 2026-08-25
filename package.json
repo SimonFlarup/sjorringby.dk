@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:gh-pages": "ng build --base-href /sjorringby.dk/",
-    "deploy": "npx angular-cli-ghpages --dir dist/angular/browser",
+    "build:gh-pages": "ng build --base-href /",
+    "deploy": "npx angular-cli-ghpages --dir dist/angular/browser --cname sjorringby.dk",
     "deploy:gh-pages": "npm run build:gh-pages && npm run deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

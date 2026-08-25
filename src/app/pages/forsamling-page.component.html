@@ -50,6 +50,7 @@
           [src]="facebookSrc"
           [attr.width]="facebookWidth"
           [attr.height]="facebookHeight"
+          (load)="onFacebookLoad()"
           scrolling="yes"
           frameborder="0"
           allowtransparency="true"

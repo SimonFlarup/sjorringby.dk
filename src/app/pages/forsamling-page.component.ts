@@ -48,6 +48,10 @@ export class ForsamlingPageComponent implements AfterViewInit, OnDestroy {
     this.updateFacebookSize();
   }
 
+  onFacebookLoad() {
+    this.updateFacebookSize();
+  }
+
   private updateFacebookSize(rawWidth?: number) {
     const host = this.facebookHost?.nativeElement;
     const computed = host ? getComputedStyle(host) : null;
