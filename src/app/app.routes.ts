@@ -8,12 +8,10 @@ import { OmkringPageComponent } from './pages/omkring-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'forsamling', component: ForsamlingPageComponent },
+  { path: 'huset', component: ForsamlingPageComponent },
   { path: 'kis', component: KisPageComponent },
   { path: 'omkring', component: OmkringPageComponent },
-  { path: 'contact', component: ContactPageComponent },
+  { path: 'kontakt', component: ContactPageComponent },
   { path: '404', component: NotFoundPageComponent },
-  { path: 'huset', redirectTo: 'forsamling' },
-  { path: 'kontakt', redirectTo: 'contact' },
   { path: '**', redirectTo: '404' }
 ];
