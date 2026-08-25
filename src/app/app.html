@@ -1,0 +1,51 @@
+<header class="site-header" role="navigation">
+  <div class="container">
+    <a class="brand" routerLink="/">
+      <img src="assets/img/byskilt.png" alt="Sjørring By" />
+    </a>
+    <nav class="menu" aria-label="Hovednavigation">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Forside</a>
+      <a routerLink="/forsamling" routerLinkActive="is-active">Forsamlingshus</a>
+      <a routerLink="/kis" routerLinkActive="is-active">KiS</a>
+      <a routerLink="/omkring" routerLinkActive="is-active">Omkring</a>
+      <a routerLink="/contact" routerLinkActive="is-active">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer id="footerwrap" class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <section>
+        <h4>Om siden</h4>
+        <hr />
+        <p>Hjemmeside for Sjørring, 8830 Tjele. Vedligeholdt af bestyrelsen i Sjørring forsamlingshus.</p>
+        <a href="mailto:mail@simonflarup.dk">Kontakt Webmaster</a>
+      </section>
+      <section>
+        <h4>Social</h4>
+        <hr />
+        <p>
+          <a href="http://fb.sjorringby.dk" target="_blank" rel="noopener">Facebook</a>
+          <br/>
+          <a href="mailto:huset@sjorringby.dk">Email</a>
+        </p>
+      </section>
+      <section>
+        <h4>Forsamlingshuset:</h4>
+        <hr />
+        <p>
+          Hobro Landevej 152A <br />
+          8830, Tjele
+        </p>
+      </section>
+    </div>
+  </div>
+
+</footer>
+
+

@@ -1,0 +1,70 @@
+<section id="blue" class="hero dark">
+  <div class="container">
+    <h1>Kontakt</h1>
+  </div>
+</section>
+
+<div id="contactwrap"></div>
+
+<section class="section">
+  <div class="container columns">
+    <article class="panel">
+      <h2>Send os en besked</h2>
+      <hr />
+      <p>
+        Ønsker du at høre mere omkring udlejning af Sjørring forsamlingshus, har du idéer til
+        bestyrelsen eller vil du på anden vis i kontakt med os? Udfyld formularen her,
+        skriv til os på Facebook eller brug vores kontaktoplysninger, så vender vi tilbage hurtigst muligt.
+      </p>
+      <p>
+        Formularen åbner din lokale mailapp med emne og besked udfyldt.
+      </p>
+      <form class="form" role="form" [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+
+        <label for="name">Dit navn</label>
+        <input id="name" type="text" formControlName="name" required />
+        @if (controls.name.touched && controls.name.invalid) {
+          <small class="form-error">Navn er påkrævet.</small>
+        }
+
+        <label for="tlf">Telefon nummer (valgfrit)</label>
+        <input id="tlf" type="tel" formControlName="tlf" />
+
+        <label for="title">Emne</label>
+        <input id="title" type="text" formControlName="title" required />
+        @if (controls.title.touched && controls.title.invalid) {
+          <small class="form-error">Emne er påkrævet.</small>
+        }
+
+        <label for="message">Besked</label>
+        <textarea id="message" rows="3" formControlName="message" required></textarea>
+        @if (controls.message.touched && controls.message.invalid) {
+          <small class="form-error">Beskeden skal være mindst 10 tegn.</small>
+        }
+
+        <button type="submit" class="button">
+          Åbn e-mail
+        </button>
+
+        @if (submitState === 'opened') {
+          <p class="form-status success">Din mailapp blev åbnet med beskeden klar til afsendelse.</p>
+        }
+
+        @if (submitState === 'error') {
+          <p class="form-status error">Kunne ikke åbne mailappen. Skriv i stedet til huset@sjorringby.dk.</p>
+        }
+      </form>
+    </article>
+
+    <aside class="panel">
+      <h3>Sjørring Forsamlingshus</h3>
+      <hr />
+      <p>
+        Hobro Landevej 152A<br />
+        8830, Tjele
+      </p>
+      <p>Email: huset@sjorringby.dk</p>
+    </aside>
+  </div>
+</section>
+
