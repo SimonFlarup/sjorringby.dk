@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MarkdownContentService } from '../services/markdown-content.service';
 
 type SubmitState = 'idle' | 'opened' | 'error';
 
@@ -11,9 +13,18 @@ type SubmitState = 'idle' | 'opened' | 'error';
 })
 export class ContactPageComponent {
   private readonly fb = inject(FormBuilder);
+  private readonly markdownContent = inject(MarkdownContentService);
   private readonly recipient = 'huset@sjorringby.dk';
 
   submitState: SubmitState = 'idle';
+
+  introHtml = toSignal(this.markdownContent.loadAsHtml('/content/contact-intro.md'), {
+    initialValue: '<p>Indhold indlæses...</p>'
+  });
+
+  asideHtml = toSignal(this.markdownContent.loadAsHtml('/content/contact-aside.md'), {
+    initialValue: '<p>Indhold indlæses...</p>'
+  });
 
   readonly form = this.fb.nonNullable.group({
     name: ['', Validators.required],

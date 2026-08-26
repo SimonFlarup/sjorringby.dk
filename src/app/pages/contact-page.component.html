@@ -9,16 +9,7 @@
 <section class="section">
   <div class="container columns">
     <article class="panel">
-      <h2>Send os en besked</h2>
-      <hr />
-      <p>
-        Ønsker du at høre mere omkring udlejning af Sjørring forsamlingshus, har du idéer til
-        bestyrelsen eller vil du på anden vis i kontakt med os? Udfyld formularen her,
-        skriv til os på Facebook eller brug vores kontaktoplysninger, så vender vi tilbage hurtigst muligt.
-      </p>
-      <p>
-        Formularen åbner din lokale mailapp med emne og besked udfyldt.
-      </p>
+      <div class="markdown-content" [innerHTML]="introHtml()"></div>
       <form class="form" role="form" [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
 
         <label for="name">Dit navn</label>
@@ -57,13 +48,7 @@
     </article>
 
     <aside class="panel">
-      <h3>Sjørring Forsamlingshus</h3>
-      <hr />
-      <p>
-        Hobro Landevej 152A<br />
-        8830, Tjele
-      </p>
-      <p>Email: huset@sjorringby.dk</p>
+      <div class="markdown-content" [innerHTML]="asideHtml()"></div>
     </aside>
   </div>
 </section>
