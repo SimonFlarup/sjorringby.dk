@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, SecurityContext, ViewChild, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { marked } from 'marked';
 
 @Component({
   selector: 'app-forsamling-page',
@@ -11,13 +13,18 @@ export class ForsamlingPageComponent implements AfterViewInit, OnDestroy {
   private facebookHost?: ElementRef<HTMLElement>;
 
   private readonly sanitizer = inject(DomSanitizer);
+  private readonly http = inject(HttpClient);
   private resizeObserver?: ResizeObserver;
+
+  articleHtml = '<p>Indhold indlæses...</p>';
 
   facebookWidth = 340;
   facebookHeight = 560;
   facebookSrc: SafeResourceUrl = this.buildFacebookSrc(this.facebookWidth, this.facebookHeight);
 
   ngAfterViewInit() {
+    this.loadArticleContent();
+
     const host = this.facebookHost?.nativeElement;
     if (!host) {
       return;
@@ -50,6 +57,18 @@ export class ForsamlingPageComponent implements AfterViewInit, OnDestroy {
 
   onFacebookLoad() {
     this.updateFacebookSize();
+  }
+
+  private loadArticleContent() {
+    this.http.get('/content/forsamling.md', { responseType: 'text' }).subscribe({
+      next: (markdown) => {
+        const rendered = marked.parse(markdown, { async: false });
+        this.articleHtml = this.sanitizer.sanitize(SecurityContext.HTML, rendered) ?? '<p>Indhold kunne ikke vises.</p>';
+      },
+      error: () => {
+        this.articleHtml = '<p>Kunne ikke hente indholdet. Prøv igen senere.</p>';
+      }
+    });
   }
 
   private updateFacebookSize(rawWidth?: number) {
